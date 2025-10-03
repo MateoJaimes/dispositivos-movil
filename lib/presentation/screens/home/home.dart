@@ -14,9 +14,12 @@ class HomeScreen extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: [
-          IconButton(onPressed: (){
-            ref.read(changeProvider.notifier).update((res) => !res);
-          }, icon: change ? Icon(Icons.dark_mode) : Icon(Icons.light_mode))
+          IconButton(
+            onPressed: () {
+              ref.read(changeProvider.notifier).update((res) => !res);
+            },
+            icon: change ? Icon(Icons.dark_mode) : Icon(Icons.light_mode),
+          ),
         ],
       ),
       body: Center(
@@ -25,6 +28,7 @@ class HomeScreen extends ConsumerWidget {
           children: [
             Text('Parcial 1 - Programacion Dispositivos Moviles'),
             Text('Mateo Alejandro Jaimes Uribe - 192094'),
+            Text('Juan Sebastian Meza Garcia - 192122'),
           ],
         ),
       ),
@@ -35,12 +39,12 @@ class HomeScreen extends ConsumerWidget {
               return ListTile(
                 title: Text(res.title),
                 subtitle: Text(res.description),
-                onTap:(){
-                  Navigator.pushNamed(context, res.patch);
+                onTap: () {
+                  Navigator.pushNamed(context, res.path);
                 },
                 leading: Icon(res.icon),
               );
-            }).toList()
+            }).toList(),
           ],
         ),
       ),

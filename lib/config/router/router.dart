@@ -5,26 +5,20 @@ import 'package:flutter/material.dart';
 class Routers {
   static final List<AppRouter> pages = [
     AppRouter(
-      patch: '/', 
-      title: 'Home', 
+      path: '/',
+      title: 'Home',
       description: 'Home Screen',
       icon: Icons.home,
       context: (context) => const HomeScreen(),
     ),
     AppRouter(
-      patch: 'form', 
-      title: 'Form', 
-      description: 'Form Screen',
+      path: "/bottom_navigation_bar",
+      title: "Bottom Navigation Bar",
+      description: "Bottom Navigation Bar Screen",
       icon: Icons.list,
-      context: (context) => const FormScreen(),
-    ),
-    AppRouter(
-      patch: 'petition', 
-      title: 'Petition', 
-      description: 'Petition Screen',
-      icon: Icons.http,
-      context: (context) => const PetitionScreen(),
+      context: (context) => const BottomNavigationBarScreen(),
     ),
   ];
-  static Route() => {for (var page in pages) page.patch : page.context};
+
+  static route() => {for (var page in pages) page.path: page.context};
 }
