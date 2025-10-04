@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:parcial/presentation/screens/bottom_navigation_bar/form/form_screen.dart';
-import 'package:parcial/presentation/screens/bottom_navigation_bar/petition/petition_screen.dart';
+import 'package:parcial/presentation/screens/form/form_screen/form_screen.dart';
+import 'package:parcial/presentation/screens/form/petition/petition_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});

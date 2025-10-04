@@ -1,4 +1,5 @@
 import 'package:parcial/config/router/app_router.dart';
+import 'package:parcial/presentation/screens/form/bottom_navigation.dart';
 import 'package:parcial/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,9 @@ class Routers {
       context: (context) => const HomeScreen(),
     ),
     AppRouter(
-      path: "/bottom_navigation_bar",
-      title: "Bottom Navigation Bar",
-      description: "Bottom Navigation Bar Screen",
+      path: "form_petition",
+      title: "Form & Petition",
+      description: "Formulario y Personajes de Dragon Ball",
       icon: Icons.list,
       context: (context) => const BottomNavigationBarScreen(),
     ),
